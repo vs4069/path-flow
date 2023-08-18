@@ -119,7 +119,7 @@ nav{
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url(/images/start.svg);
+    background-image: url(../images/start.svg);
     background-color: #6fed6f;
     border: 1px solid rgb(1, 56, 1);
     border-radius: 1px;
@@ -128,7 +128,7 @@ nav{
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url(/images/end.svg);
+    background-image: url(../images/end.svg);
     background-color: #ed6f6f;
     border: 1px solid rgb(56, 1, 1);
     border-radius: 1px;

@@ -22,6 +22,8 @@ function biDirectionalSearch(grid,start,finish)
         const backwardNode = backwardQueue.dequeue();
         const forwardNeighbors = getNeighbors(grid, forwardNode);
         const backwardNeighbors = getNeighbors(grid, backwardNode);
+        forwardVisited[forwardNode.x][forwardNode.y] = true;
+        backwardVisited[backwardNode.x][backwardNode.y] = true;
         for (const neighbor of forwardNeighbors) {
             const tentativeDistance = grid[neighbor.x][neighbor.y]+forwardDistance[forwardNode.x][forwardNode.y];
             if (tentativeDistance < forwardDistance[neighbor.x][neighbor.y]) {
@@ -38,7 +40,6 @@ function biDirectionalSearch(grid,start,finish)
                         totalpath--;
                         return [true,trackPathUsingArray(grid,finish,commonNode,backwardDistance,timedelay)*5];
                 }
-                forwardVisited[neighbor.x][neighbor.y] = true;
             }
         }
         for (const neighbor of backwardNeighbors) {
@@ -57,7 +58,6 @@ function biDirectionalSearch(grid,start,finish)
                     totalpath--;
                     return [true,trackPathUsingArray(finish,commonNode,[[1,0],[0,1],[-1,0],[0,-1]],backwardDistance,timedelay)*5];
                 }
-                backwardVisited[neighbor.x][neighbor.y] = true;
             }
         }
         addVisitedNode(forwardNode.x,forwardNode.y,timedelay*5);

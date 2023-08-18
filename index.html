@@ -1,0 +1,46 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/main.css">
+    <title>Path Flow</title>
+</head>
+<body onmouseup="insertable=false"onmouseleave="insertable=false;" draggable="false">
+    <header>
+        <nav>
+            <div class="nav-heading">
+                <h1><a href="#" class="logo" onclick="createGrid()">Path Flow</a></h1>
+            </div>
+            <div class="menu-bar">
+                <ul class="menu-bar-list">
+                    <li><a href="#" class="menu-button menu-button-selected dijkstra" onclick="pickAlgorithm('dijkstra')">Dijkstra's Algorithm</a></li>
+                    <li><a href="#" class="menu-button aSearch" onclick="pickAlgorithm('aSearch')">A* Search</a></li>
+                    <li><a href="#" class="menu-button bfs" onclick="pickAlgorithm('bfs')">Breadth-first Search</a></li>
+                    <li><a href="#" class="menu-button dfs" onclick="pickAlgorithm('dfs')">Depth-first Search</a></li>
+                    <li><a href="#" class="menu-button greedy" onclick="pickAlgorithm('greedy')">Greedy Best-first Search</a></li>
+                    <li><a href="#" class="menu-button biDirectional" onclick="pickAlgorithm('biDirectional')">Bidirectional Algorithm</a></li>
+                </ul>
+            </div>
+            <div class="visualize-button">
+                <a href="#" onclick="visualize()">Visualize!</a>
+            </div>
+        </nav>
+        <div class="tool-bar"></div>
+    </header>
+    <main draggable="false">
+        <div class="path-grid" draggable="false"></div>
+    </main>
+</body>
+<script src="./data-structures/data-structures.js"></script>
+<script src="./script/animation.js"></script>
+<script src="./script/board.js"></script>
+<script src="./algorithms/useful-functions.js"></script>
+<script src="./algorithms/dijkstra-algorithm.js"></script>
+<script src="./algorithms/depth-first-search.js"></script>
+<script src="./algorithms/bredth-first-search.js"></script>
+<script src="./algorithms/bi-directional-algorithm.js"></script>
+<script src="./algorithms/a-star-search-algorithm.js"></script>
+<script src="./algorithms/greedy-best-first-search-algorithm.js"></script>
+<script src="./script/index.js"></script>
+</html>

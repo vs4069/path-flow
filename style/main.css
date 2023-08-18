@@ -1,0 +1,146 @@
+html{
+    background-color: #222F3D;
+    min-width: 1370px;
+}
+*{
+    padding: 0px;
+    margin:0px;
+    font-family: sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    user-select: none;
+}
+    /* navBar */
+nav{
+    background-color: #0F1111;
+    align-items: center;
+    vertical-align: middle;
+    justify-content: center;
+    height: 60px;
+    display: flex;
+}
+.nav-heading h1 a{
+    display: flex;
+    flex-shrink: 0;
+    margin: 0px 50px 0px 10px;
+    padding: 10px 0px;
+    color: white;
+    font-size: 25px;
+    font-weight: 800;
+}
+.menu-bar-list{
+    display: flex;
+    list-style-type: none;
+}
+.menu-button{
+    display: block;
+    padding: 10px 15px;
+    font-size: 14px;
+    border: 1px solid transparent;
+}
+.menu-button-selected{
+    color: #ffd755;
+    border-color: #FFBB55;
+}
+.visualize-button{
+    margin: 0px 10px 0px 50px;
+}
+.visualize-button a{
+    display: block;
+    color: #000000b1;
+    background-color:#FFBB55;
+    flex-shrink: 0;
+    padding: 15px;
+    font-size: 14px;
+    font-weight: 550;
+    border: 1px solid transparent;
+}
+.visualize-button a:hover{
+    background-color: #ff9900;
+    color: rgb(120, 85, 22);
+    border: 1px solid white;
+}
+.tool-bar{
+    height: 40px;
+    display: flex;
+    background-color: #222F3D;
+    font-size: 15px;
+    text-align: center;
+    vertical-align: middle;
+    justify-content: center;
+    margin: auto 0px;
+}
+.tool-bar p{
+    width: auto;
+    line-height: 40px;
+    font-size: 13px;
+    color: #e3e6e6b6;
+    font-style: italic;
+}
+.tool-bar-ele{
+    width: 15px;
+    height: 15px;
+    margin: auto 7px auto 10px;
+    line-height: 40px;
+    border: 1px dotted rgb(6, 188, 188);
+}
+
+/* mainSection */
+.main{
+    align-items: center;
+    justify-content: center;
+}
+.path-grid{
+    margin:auto;
+}
+.grid-row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.grid-ele{
+    display: block;
+    width: 26px;
+    height: 26px;
+    border: 1px dotted rgb(6, 188, 188);
+    background-color: #e3e6e6;
+}
+.blockage{
+    background-color: #6f75ed;
+}
+.weightage{
+    background-color: orchid;
+    background-position: center;
+    background-size: 7px;
+    background-repeat: no-repeat;
+    transition: background-color 00ms ease;
+}
+.start-node {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(/images/start.svg);
+    background-color: #6fed6f;
+    border: 1px solid rgb(1, 56, 1);
+    border-radius: 1px;
+}
+.finish-node {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(/images/end.svg);
+    background-color: #ed6f6f;
+    border: 1px solid rgb(56, 1, 1);
+    border-radius: 1px;
+}
+.visited-node{
+    background-color: #82e97be6;
+    transition: background-color 600ms ease;
+}
+.onqueue-node {
+    background-color: #ff7676e6;
+}
+.path-node{
+    background-color: #f8ed53;
+    transition: background-color 200ms ease;
+}

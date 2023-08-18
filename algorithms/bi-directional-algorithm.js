@@ -54,9 +54,9 @@ function biDirectionalSearch(grid,start,finish)
                     commonNode.y = neighbor.y;
                     addPathNode(commonNode.x,commonNode.y,timedelay*5);
                     timedelay+=25;
-                    trackPathUsingArray(start,commonNode,[[1,0],[0,1],[-1,0],[0,-1]],forwardDistance,timedelay);
+                    trackPathUsingArray(grid,start,commonNode,forwardDistance,timedelay);
                     totalpath--;
-                    return [true,trackPathUsingArray(finish,commonNode,[[1,0],[0,1],[-1,0],[0,-1]],backwardDistance,timedelay)*5];
+                    return [true,trackPathUsingArray(grid,finish,commonNode,backwardDistance,timedelay)*5];
                 }
             }
         }
